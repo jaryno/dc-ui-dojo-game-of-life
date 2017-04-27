@@ -1,20 +1,19 @@
 import expect from 'expect';
 
-import gameOfLife from './gameOfLife.js';
+import gameOfLife from './gameOfLife';
 
-import { arrayify, stringify } from './helpers.js';
+import { arrayify } from './helpers';
 
 describe('gameOfLife', () => {
-
   it('empty board stay empty', () => {
-    let inputBoard = arrayify(`
+    const inputBoard = arrayify(`
       0000 0000
       0000 0000
       0000 0000
       0000 0000
     `);
 
-    let expectedOutput = arrayify(`
+    const expectedOutput = arrayify(`
       0000 0000
       0000 0000
       0000 0000
