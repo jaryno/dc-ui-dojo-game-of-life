@@ -1,3 +1,3 @@
-export default function gameOfLife() {
-  return true;
+export default function gameOfLife(inputBoard) {
+  return inputBoard;
 }
