@@ -91,8 +91,19 @@ btnOpen.addEventListener('click', function(e) {
         menu.classList.remove("slide-out");
         menu.classList.add("slide-in");
     }
-
     
+    e.stopPropagation();
+});
+
+var btnGenRand = document.getElementById("btnGenRand");
+btnGenRand.addEventListener('click', function(e) {
+    game.randomGeneratePoints();
+    e.stopPropagation();
+});
+
+var btnClear = document.getElementById("btnClear");
+btnClear.addEventListener('click', function(e) {
+    game.clear();
     e.stopPropagation();
 });
 

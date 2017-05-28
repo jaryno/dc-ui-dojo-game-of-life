@@ -59,6 +59,26 @@ function _setPoint(cell, row) {
     }
 }
 
+function randomGeneratePoints() {
+    for(let i = 0; i < _matrix.length; i++) {
+        for(let j = 0; j < _matrix[i].length; j++) {
+            if(Math.random() < 0.08) {
+                _setPoint(i, j);
+            }
+        }
+    }
+    paint();
+}
+
+function clear() {
+    for(let i = 0; i < _matrix.length; i++) {
+        for(let j = 0; j < _matrix[i].length; j++) {
+            _matrix[i][j] = '0';
+        }
+    }
+    paint();
+}
+
 module.exports = {
     init: init,
     paint: paint,
@@ -66,5 +86,7 @@ module.exports = {
     getCols: getCols,
     setMatrix: setMatrix,
     nextStep: nextStep,
-    setPointByMouseClick: setPointByMouseClick
+    setPointByMouseClick: setPointByMouseClick,
+    randomGeneratePoints: randomGeneratePoints,
+    clear: clear
 }

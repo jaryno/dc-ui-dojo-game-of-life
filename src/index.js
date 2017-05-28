@@ -10,9 +10,9 @@ ui.setEngine(engine);
 ui.setDraw(draw);
 
 var matrix = [];
-for(let i = 0; i < 80; i++) {
+for(let i = 0; i < 100; i++) {
     matrix[i] = [];
-    for(let j = 0; j < 80; j++) {
+    for(let j = 0; j < 100; j++) {
 
         matrix[i][j] = "0";
     }
